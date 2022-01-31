@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        changeBackground = () => {
+            const body = document.body;
+            rgb = [];
+            for (let i = 0; i < 3; i++) {
+                num = Math.floor(Math.random() * 256);
+                rgb.push(num);   
+            }
+
+            body.innerText = `Your new background color is RGB(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`
+            body.style.background = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+        }
+
+        changeBackground();
+
+    </script>
+</body>
+</html>

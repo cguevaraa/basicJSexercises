@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        createList = () => {
+            let counter = 0;
+            const body = document.body;
+            ul = document.createElement('UL');
+
+            for (let i = 0; i < 10; i++) {
+                num = Math.floor(Math.random() * 11);
+
+                if (num === 10){
+                    counter++;
+                }
+
+                let li = document.createElement('LI');
+                li.appendChild(document.createTextNode(`${num}`));
+                ul.appendChild(li);    
+            }
+            body.appendChild(ul);
+
+            p = document.createElement('p');
+            p.appendChild(document.createTextNode(`You have ${counter} "10s" in your list.`));
+            p.style.color = 'teal';
+            body.appendChild(p);
+        }
+
+        createList();
+
+    </script>
+</body>
+</html>

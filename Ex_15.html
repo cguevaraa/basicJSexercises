@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createTable(x,y) {
+        const body = document.body;
+        tbl = document.createElement('table');
+        tbl.style.width = '800px';
+        tbl.style.border = '1px solid black';
+
+        for (let i = 0; i < x; i++) {
+            const tr = tbl.insertRow();
+            for (let j = 0; j < y; j++) {
+                if (i === 2 && j === y) {
+                    break;
+                } else {
+                    const td = tr.insertCell();
+                    td.appendChild(document.createTextNode(`i${i} j${j}`));
+                    td.style.border = '1px solid black';
+                    td.style.textAlign = "center";
+                }
+            }
+        }
+        body.appendChild(tbl);
+        }
+        
+        x = prompt('Number of rows');
+        y = prompt('Number of columns');
+        createTable(x,y);
+    </script>
+</body>
+</html>

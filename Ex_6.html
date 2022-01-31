@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ht = prompt('Enter the price in excl. taxes (dlls)');
+        rate = prompt('Enter the VAT rate (%)');
+        ttc = ht * (1 + rate/100);
+        
+        message = `The price incl. taxes is ${ttc} dlls.`;
+        color = 'red';
+
+        if (ttc <= 100) {
+            color = 'green';
+        }
+
+        document.body.innerHTML = `<h1 style="color: ${color};">${message}</h1>`;
+
+    </script>
+</body>
+</html>
